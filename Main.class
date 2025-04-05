@@ -1,0 +1,101 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Sayın Kullanicimiz Hoşgeldiniz");
+        // Film listesini belirten dizimiz
+        String[] filmlist = {"Breaking Bad", "Mr Robot", "İnception", "Die Hard", "Now You See Me", "Catch Me If You Can", "Interstellar","Green Mile","Cars","Toy Story"};
+        // Film Sürelerini belirten dizimiz
+        String[] filmsüre = {"3:30 saat", "2:00 saat", "2:30 saat", "2:15 saat", "1:35 saat", "2:10 saat", "1:50 saat","3:00 saat","2:12 saat","1:11 saat"};
+        // Film türlerini belirten dizimiz
+        String[] filmtür = {"Aksiyon", "Bilim Kurgu", "Bilim Kurgu", "Aksiyon", "Bilim Kurgu", "Macera","Bilim Kurgu","Dram","Animasyon","Animasyon"};
+
+        //en fazla 20 kişilik kullanıcı dizisi
+        String[] k_adi = new String[20];
+        String[] email = new String[20];
+
+        // İlk 3 kullanıcı önden ekli
+        k_adi[0] = "Samet";
+        email[0] = "samet@gmail.com";
+        k_adi[1] = "Ahmet";
+        email[1] = "ahmet@gmail.com";
+        k_adi[2] = "Ali";
+        email[2] = "ali@gmail.com";
+        // toplam kullanici sayısı
+        int k_sayisi = 3;
+        // while döngüsüyle kullanici sistemden çıkana kadar sistemde tutacak ve işlemler sağlanacak
+        while (true) {
+            System.out.print("Lütfen yapmak istediğiniz işlemin numarasını giriniz: \n1: Filmleri Listele \n2: Kullanıcıları Listele \n3: Kayıt Ol \n4: Bilet Kaydı yap \n5: Sistemden Çıkış yap\nSeçim: ");
+            int k_tercih = input.nextInt();
+            // Filmleri listeleme
+            if (k_tercih == 1) {
+                for (int i = 0; i < filmlist.length; i++) {
+                    System.out.println((i+1) + ": " + filmlist[i] + "/ " + filmsüre[i] + "/ " + filmtür[i]);
+                }
+            }
+            //Kullanıcıları listeleme
+            if (k_tercih == 2) {
+                for (int i = 0; i < k_adi.length; i++) {
+                    System.out.println((i+1) + " " + k_adi[i] + " " + email[i]);
+                }
+            }
+            //Yeni Kullanıcı kayıdı yapmak için seçilmesi gereken bölüm
+            if (k_tercih == 3) {
+                if (k_sayisi>= 20) {
+                    System.out.println("Maksimum kullanıcı sayısına ulaşıldı (20). Yeni kayıt yapılamıyor.");
+                } else {
+                    System.out.println("Sinemamıza Hoşgeldiniz Lütfen Kayıt Olmak için Adınızı ve Mail adresinizi sırasıyla giriniz : ");
+                    System.out.print("Adınız : ");
+                    String yeni_K = input.next();
+                    System.out.print("Mail Adresiniz : ");
+                    String yeni_K_Mail = input.next();
+                    k_adi[k_sayisi] = yeni_K;
+                    email[k_sayisi] = yeni_K_Mail;
+                    System.out.println("Kayıt başarılı! Hoşgeldiniz " + yeni_K);
+                    k_sayisi++;
+                }
+            }
+            // Kullanıcılar ile Filmleri seçerek bilet oluşturan bölüm
+            if (k_tercih == 4) {
+                if (k_sayisi == 0) {
+                    System.out.println("Henüz kullanıcı bulunmamaktadır.");
+                    continue;
+                }
+
+                System.out.println("Bilet kaydı için kullanıcı seçiniz:");
+                for (int i = 0; i < k_sayisi; i++) {
+                    System.out.println(i + " - " + k_adi[i]);
+                }
+                System.out.print("Kullanıcı numarası: ");
+                int secilen_k = input.nextInt();
+
+                 if (secilen_k < 0 || secilen_k >= k_sayisi) {
+                    System.out.println("Geçersiz kullanıcı numarası!");
+                    continue;
+                }
+
+                System.out.println("Film seçiniz:");
+                for (int i = 0; i < filmlist.length; i++) {
+                    System.out.println(i + " - " + filmlist[i]);
+                }
+                System.out.print("Film numarası: ");
+                int secilenFilm = input.nextInt();
+
+                if (secilenFilm < 0 || secilenFilm >= filmlist.length) {
+                    System.out.println("Geçersiz film numarası!");
+                    continue;
+                }
+
+                System.out.println(k_adi[secilen_k] + " adlı kullanıcıya '" + filmlist[secilenFilm] + "' filmi için bilet kaydı yapıldı.");
+            }
+            // Sistemden çıkış bölümü
+            if (k_tercih == 5) {
+                System.out.println("Sistemden çıkılıyor. İyi günler.");
+                break;
+            }
+        }
+    }
+       }
