@@ -1,3 +1,13 @@
+## Proje Sahibi
+
+- **Ad Soyad:** Samet ERDOĞAN  
+- **Öğrenci Numarası:** 20230108039
+- **Bölüm:** Bilgisayar Programcılığı
+- **Ders Adı:** Nesneye Dayalı Programlama 1
+- **Ders Kodu:** BIP1026
+- **Öğretim Görevlisi:** Emrah SARIÇİÇEK
+- **Teslim Tarihi:** 06/04/2025
+
 # Sinema Müşteri Kaydı ve Bilet Sistemi
 
 Bu proje, bir sinema işletmesi için temel müşteri kaydı ve bilet işlemlerini gerçekleştiren bir konsol tabanlı sistemdir. Kullanıcılar sisteme kayıt olabilir, mevcut filmler arasından seçim yaparak bilet kaydı oluşturabilirler.
@@ -5,9 +15,6 @@ Bu proje, bir sinema işletmesi için temel müşteri kaydı ve bilet işlemleri
 ## Proje Hakkında
 
 Bu uygulama, sinema işletmeleri için kullanıcılara film listesi sunmak, müşteri kaydı almak ve bilet kaydı oluşturmak gibi temel işlemleri gerçekleştiren bir Java uygulamasıdır. Kullanıcılar, konsol üzerinden işlemlerini gerçekleştirebilirler. Bu uygulama, bir sinema salonunun günlük operasyonlarını simüle eden basit bir örnektir.
-
-## Nasıl Kullanılır
-Bu Java uygulaması, bir sinema sistemini simüle eder. Kullanıcılar, sisteme kayıt olabilir, mevcut filmleri listeleyebilir, film seçip bilet kaydı yapabilir ve kullanıcıları görüntüleyebilirler. Program, kullanıcıların ad ve e-posta adreslerini kaydederek 20 kişiye kadar kullanıcı kabul eder. Ayrıca, kullanıcılar bilet almak istediklerinde, kayıtlı filmler arasından seçim yaparak bilet kaydı oluşturabilirler. Kullanıcılar, işlemlerini ana menü üzerinden kolayca yapabilirler ve sistemden çıkabilirler.
 
 ### Uygulama Akışı:
 1. **Filmleri Listele:** Mevcut filmler ve bilgileri kullanıcıya gösterilir.
