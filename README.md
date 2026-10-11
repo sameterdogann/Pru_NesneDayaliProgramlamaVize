@@ -1,47 +1,64 @@
 # Sinema Müşteri Kaydı ve Bilet Sistemi
 
-Bu proje, bir sinema işletmesi için temel müşteri kaydı ve bilet işlemlerini gerçekleştiren bir konsol tabanlı sistemdir. Kullanıcılar sisteme kayıt olabilir, mevcut filmler arasından seçim yaparak bilet kaydı oluşturabilirler.
+Bu proje, bir sinema salonu için temel müşteri kaydı, film yönetimi ve bilet takip işlemlerini gerçekleştiren, konsol tabanlı nesneye dayalı bir Java uygulamasıdır.
 
-##  Proje Sahibi
+## 👨‍💻 Proje Sahibi & Akademik Bilgiler
 
-- **Ad Soyad:** Samet ERDOĞAN  
-- **Öğrenci Numarası:** 20230108039
-- **Bölüm:** Bilgisayar Programcılığı
-- **Ders Adı:** Nesneye Dayalı Programlama 1
-- **Ders Kodu:** BIP1026
-- **Öğretim Görevlisi:** Emrah SARIÇİÇEK
-- **Teslim Tarihi:** 06/04/2025
+* **Ad Soyad:** Samet ERDOĞAN
+* **Öğrenci Numarası:** 20230108039
+* **Bölüm:** Bilgisayar Programcılığı
+* **Üniversite:** Piri Reis Üniversitesi
+* **Ders Adı:** Nesneye Dayalı Programlama 1
+* **Ders Kodu:** BIP1026
+* **Öğretim Görevlisi:** Emrah SARIÇİÇEK
+* **Teslim Tarihi:** 06/04/2025
 
-## Proje Hakkında
+---
 
-Bu Java uygulaması, bir sinema salonu için temel yönetim sistemini simüle eder. Sistem şu özellikleri içerir:
+## 🚀 Proje Hakkında
 
-- Kullanıcı kayıt ve yönetimi
-- Film ekleme ve listeleme
-- Bilet satış ve takip sistemi
-- Kullanıcı bazlı bilet sorgulama
+Uygulama, temel Java kontrol yapıları, diziler (arrays) ve çok boyutlu matris yapıları kullanılarak geliştirilmiştir. Harici bir veritabanı bağımlılığı olmadan bellek içi (in-memory) veri yönetimi sağlar.
 
-**Başlangıç Verileri:**
-- 4 önceden tanımlı film
-- 3 önceden tanımlı kullanıcı
+### 🌟 Başlangıç Verileri
+* **Ön Yüklü Filmler (4 Adet):** Breaking Bad, Mr. Robot, İnception, Die Hard
+* **Ön Yüklü Kullanıcılar (3 Adet):** Samet, Ahmet, Ali
 
-## Özellikleri
+---
 
-**Film Listeleme:** 
-Sistemde kayıtlı tüm filmleri (`filmlist`, `filmsüre`, `filmtür` dizilerini kullanarak) ad, süre ve tür bilgileriyle birlikte görüntüler. 
-**Kullanıcı Kayıt:** Yeni kullanıcıları (`k_adi` ve `email` dizilerine kaydederek) sisteme ekler, maksimum 20 kullanıcı kapasitesi bulunur. 
-**Bilet Kaydı:** Kullanıcıların seçtiği filmleri (`biletler` matrisinde 1 değeri atayarak) bilet olarak kaydeder. 
-**Listeleme:** Hem kullanıcıları (`k_adi` dizisi) hem filmleri (`filmlist` dizisi) kolayca listeleyebilir. 
-**Etkileşimli Konsol Arayüzü:** Scanner ile kullanıcı girdilerini alan ve while döngüsüyle sürekli çalışan basit bir metin tabanlı menü sistemi sunar (`k_tercih` değişkeniyle seçim yapılır). Tüm bu özellikler Java dizileri ve temel kontrol yapıları kullanılarak implemente edilmiştir.
+## 📋 Özellikler ve Menü Seçenekleri
 
-## Gereksinimler
+Sistem, kullanıcı çıkış yapana kadar çalışan interaktif bir `while` döngüsü menüsü sunar:
 
-Bu projeyi çalıştırabilmek için aşağıdaki gereksinimlerin karşılanması gerekmektedir:
-- **Java 8 veya daha yeni bir sürüm**
-- **IDE veya metin editörü:** IntelliJ IDEA, Eclipse veya VSCode gibi bir Java IDE'si tercih edilebilir.
+1. **Yeni Film Ekle:** Maksimum 10 film kapasitesiyle sisteme yeni film adı, süresi ve türü ekler.
+2. **Filmleri Listele:** Sistemde kayıtlı tüm filmleri detaylarıyla birlikte ekrana yazdırır.
+3. **Yeni Kullanıcı Kaydı:** Maksimum 20 kullanıcı kapasitesiyle ad ve e-posta bilgisi alarak kayıt yapar.
+4. **Kullanıcıları Listele:** Sistemdeki kayıtlı tüm kullanıcıları listeler.
+5. **Bilet Oluştur:** Seçilen kullanıcı ile seçilen film arasında ilişki kurarak 2 boyutlu matris üzerinde (`biletler[kullanıcı][film] = 1`) bilet kaydı oluşturur.
+6. **Kullanıcı Biletlerini Görüntüle:** Belirli bir kullanıcının daha önceden bilet aldığı tüm filmleri listeler.
+7. **Sistemden Çıkış:** Uygulamayı sonlandırır.
 
-## Nasıl Çalıştırılır?
+---
 
-1. Projeyi klonlayın veya indirin:
+## 🛠️ Teknik Altyapı ve Kullanılan Yapılar
+
+* **Programlama Dili:** Java
+* **Veri Yapıları:** Tek boyutlu diziler (`String[]`), İki boyutlu matrisler (`int[][]`)
+* **Akış Kontrolleri:** `while` döngüleri, `if-else` koşul blokları
+* **Kullanıcı Etkileşimi:** `java.util.Scanner`
+
+---
+
+## 📦 Gereksinimler
+
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki bileşenlerin kurulu olması gerekir:
+
+* **Java Development Kit (JDK):** Sürüm 8 veya üzeri
+* **Java IDE:** IntelliJ IDEA, Eclipse, NetBeans veya VS Code
+
+---
+
+## ⚙️ Nasıl Çalıştırılır?
+
+1. Projeyi bilgisayarınıza klonlayın veya indirin:
    ```bash
-   git clone [repo-url]
+   git clone [https://github.com/kullanici-adiniz/proje-adi.git](https://github.com/kullanici-adiniz/proje-adi.git)
